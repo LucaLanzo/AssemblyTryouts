@@ -1,6 +1,6 @@
 global main
-extern printf
 extern scanf
+extern printf
 
 section .text
 main:
@@ -17,7 +17,7 @@ main:
     sub ecx, inputLen  
     neg ecx
     dec ecx                         ; essentially does ecx = inputLen - ecx as neg will "switch" the sub
-    ; mov [len], ecx                  ; real input length of scanf string is now stored here
+    mov [len], ecx                  ; real input length of scanf string is now stored here
     
 
 loop:
